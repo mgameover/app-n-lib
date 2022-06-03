@@ -3,7 +3,15 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@my/components": [
+        "./projects/components/public-api.ts"
+      ],
+      "@my/components/*": [
+        "./projects/components/*"
+      ]
+    }
   },
   "files": [
     "src/main.ts",
